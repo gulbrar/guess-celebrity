@@ -1,0 +1,111 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+  // Declare variables to store user inputs
+  string firstQuestion, secondQuestion, thirdQuestion;
+
+  // Welcome message
+  cout << "Welcome to the 'Guess Who?' celebrity guessing game by Gulshan." << endl;
+  cout << endl;
+  cout << "Think of a celebrity, and I will try to guess." << endl;
+  cout << "Please answer all questions with 'yes' or 'no'." << endl;
+  cout << endl;
+  cout << endl;
+
+  // First question
+  cout << "Is the celebrity male? ";
+  cin >> firstQuestion;
+  cout << endl;
+
+  // Input Validation
+  if (firstQuestion == "yes")
+  {
+    // Second question for a male celebrity
+    cout << "Is he an actor? ";
+    cin >> secondQuestion;
+    cout << endl;
+    // Input Validation
+    if (secondQuestion == "yes")
+    {
+      // Third question for a male actor
+      cout << "Has he played any roles in Marvel movies? ";
+      cin >> thirdQuestion;
+      cout << endl;
+
+      // Final guess based on the answers to all three questions
+      if (thirdQuestion == "yes")
+      {
+        cout << "I guess the celebrity you're thinking of is Robert Downey Jr." << endl;
+      }
+      else if (thirdQuestion == "no")
+      {
+        cout << "I guess the celebrity you're thinking of is Leonardo DiCaprio." << endl;
+      }
+    }
+    else if (secondQuestion == "no")
+    {
+      // Third question for a male athlete
+      cout << "Is he a famous athlete? ";
+      cin >> thirdQuestion;
+      cout << endl;
+
+      // Final guess based on the answers to all three questions
+      if (thirdQuestion == "yes")
+      {
+        cout << "I guess the celebrity you're thinking of is Cristiano Ronaldo." << endl;
+      }
+      else if (thirdQuestion == "no")
+      {
+        cout << "I guess the celebrity you're thinking of is Elon Musk." << endl;
+      }
+    }
+  }
+  else if (firstQuestion == "no")
+  {
+    // Second question for a female celebrity
+    cout << "Is she an actress? ";
+    cin >> secondQuestion;
+    cout << endl;
+
+    // Input Validation
+    if (secondQuestion == "yes")
+    {
+      // Third question for a female actress
+      cout << "Has she played any roles in Marvel movies? ";
+      cin >> thirdQuestion;
+      cout << endl;
+
+      // Final guess based on the answers to all three questions
+      if (thirdQuestion == "yes")
+      {
+        cout << "I guess the celebrity you're thinking of is Scarlett Johansson." << endl;
+      }
+      else if (thirdQuestion == "no")
+      {
+        cout << "I guess the celebrity you're thinking of is Monica Bellucci." << endl;
+      }
+    }
+    else if (secondQuestion == "no")
+    {
+      // Third question for a female singer
+      cout << "Is she a famous singer? ";
+      cin >> thirdQuestion;
+      cout << endl;
+
+      // Final guess based on the answers to all three questions
+      if (thirdQuestion == "yes")
+      {
+        cout << "I guess the celebrity you're thinking of is Rihanna." << endl;
+      }
+      else if (thirdQuestion == "no")
+      {
+        cout << "I guess the celebrity you're thinking of is Kylie Jenner." << endl;
+      }
+    }
+  }
+
+  return 0;
+}
